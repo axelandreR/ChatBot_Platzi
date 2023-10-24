@@ -2,8 +2,8 @@ import openai
 import requests
 import time
 
-openai.api_key = "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"
-TOKEN = "6527924588:AAF1XypagzejmKDSsTwwCzk6AM6tAmr9ZMA"
+openai.api_key = "API_KEY"
+TOKEN = "TOKEN"
 
 def get_updates(offset):
        url = f"https://api.telegram.org/bot{TOKEN}/getUpdates"
@@ -18,7 +18,7 @@ def send_messages(chat_id, text):
        return response
 
 def get_openai_response(prompt):
-       model_engine = "davinci:ft-personal-2023-10-23-17-03-55"
+       model_engine = "MODEL"
        response = openai.Completion.create(
               engine = model_engine,
               prompt = prompt,
